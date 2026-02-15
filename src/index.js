@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 const pizzaData = [
   {
@@ -56,33 +57,70 @@ function App() {
   );
 }
 function Header() {
-  return <h1> Pizzas with hygine.org</h1>;
+  return (
+    <header className="header">
+      <h1> Pizzas with hygine.org</h1>;
+    </header>
+  );
 }
 function Menu() {
   return (
-    <div>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-    </div>
+    <main className="menu">
+      <h2>Our menu</h2>
+      <ul className="pizzas">
+        {pizzaData.map((n) => (
+          <Pizza pizzaobj={n} key={n.name} />
+        ))}
+      </ul>
+    </main>
   );
+
+  function Pizza({ pizzaobj }) {
+    return (
+      <div className={`pizza ${pizzaobj.soldOut ? "sold-out" : ""}`}>
+        <img src={pizzaobj.photoName} alt={pizzaobj.name} />
+        <li>
+          <h3>{pizzaobj.name}</h3>
+          <p>{pizzaobj.ingredients}</p>
+          <span>{pizzaobj.soldOut ? "SOLDOUT" : pizzaobj.price}</span>
+        </li>
+      </div>
+    );
+  }
 }
 function Footer() {
   const hour = new Date().getHours();
-  const open = 7;
+  const open = 9;
   const close = 21;
-  if (hour >= open && hour <= close) alert("We're Open Now");
-  else alert("WE're Closed Now");
+  const isOpen = hour >= open && hour <= close;
+  // if (hour >= open && hour <= close) alert("We're Open Now");
+  // else alert("WE're Closed Now");
 
-  return <footer>{new Date().toLocaleTimeString()}. WE're Open Now</footer>;
-}
-function Pizza() {
   return (
-    <div>
-      <img src="pizzas\spinaci.jpg" alt="pizzas spinaci" />
-      <h1>Pizza Spinaci"</h1>
-      <p>ingredients: "Tomato, mozarella, spinach, and ricotta cheese</p>
-    </div>
+    <footer className="footer">
+      {isOpen ? (
+        <div className="order">
+          <p>
+            We're open from {open} till {close}.00 . You can visit our shop or
+            order online during the working hour
+          </p>
+          <a
+            href="https://www.dominos.co.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="btn">Order NOW !</button>
+          </a>
+        </div>
+      ) : (
+        <div className="order">
+          <p>
+            Sorry,Now we're Closed Now. shop timing is from {open} to {close}{" "}
+            .{" "}
+          </p>
+        </div>
+      )}
+    </footer>
   );
 }
 
