@@ -49,10 +49,32 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <h1> Hello world !! </h1>
+      <Header />
+      <Menu />
+      <Footer />
+    </div>
+  );
+}
+function Header() {
+  return <h1> Pizzas with hygine.org</h1>;
+}
+function Menu() {
+  return (
+    <div>
+      <Pizza />
+      <Pizza />
       <Pizza />
     </div>
   );
+}
+function Footer() {
+  const hour = new Date().getHours();
+  const open = 7;
+  const close = 21;
+  if (hour >= open && hour <= close) alert("We're Open Now");
+  else alert("WE're Closed Now");
+
+  return <footer>{new Date().toLocaleTimeString()}. WE're Open Now</footer>;
 }
 function Pizza() {
   return (
