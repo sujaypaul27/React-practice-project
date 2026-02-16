@@ -94,7 +94,7 @@ function Footer() {
   const close = 21;
   const isOpen = hour >= open && hour <= close;
   // if (hour >= open && hour <= close) alert("We're Open Now");
-  // else alert("WE're Closed Now");
+  // else alert("WE're Closed Now");ll
 
   return (
     <footer className="footer">
