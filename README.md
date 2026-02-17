@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# 🍕 Interactive Pizza Menu Web Application using React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔗 Live Preview
 
-## Available Scripts
+👉 https://sujaypaulminiproject3.vercel.app
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is a React-based Pizza Menu Web Application that dynamically displays a list of pizzas along with their ingredients, prices, and availability status.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The application includes business hour logic to display whether the shop is currently open or closed, and conditionally allows users to place an order during working hours.
 
-### `npm test`
+This project demonstrates core React fundamentals such as component-based architecture, props, conditional rendering, dynamic list rendering using `map()`, and time-based UI logic.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Dynamic rendering of pizza items using `map()`
+- Conditional display of "SOLD OUT" status
+- Business hour logic (Open / Closed based on current time)
+- Conditional rendering using ternary operator
+- Reusable React components
+- External order link integration
+- Clean and structured UI layout
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧠 React Concepts Used
 
-### `npm run eject`
+- Functional Components
+- Props
+- Conditional Rendering
+- JSX
+- Array Mapping
+- Dynamic Class Names
+- JavaScript Date Object
+- React StrictMode
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Each component follows the single responsibility principle for better maintainability and scalability.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⏰ Business Logic Implementation
 
-## Learn More
+The application checks the current system time using the JavaScript `Date` object.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If the current time is between 9 AM and 9 PM:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Displays "We're Open"
+- Shows "Order Now" button
 
-### Code Splitting
+Otherwise:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Displays "We're Closed" message
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🛠 Technologies Used
 
-### Making a Progressive Web App
+- React
+- JavaScript (ES6)
+- HTML
+- CSS
+- Vercel (Deployment)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📈 What I Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Structuring a React application properly
+- Passing props between components
+- Rendering UI dynamically from arrays
+- Using conditional rendering effectively
+- Implementing real-world time-based logic
+- Deploying React applications using Vercel
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔮 Future Improvements
 
-### `npm run build` fails to minify
+- Add Add-to-Cart functionality
+- Implement state management for orders
+- Add filtering (Veg / Non-Veg)
+- Add animation effects
+- Connect to backend API
+- Store menu data externally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 👨‍💻 Author
+
+Sujay Paul P  
+Engineering Student | Aspiring Java Full Stack Developer

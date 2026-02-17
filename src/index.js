@@ -130,3 +130,124 @@ root.render(
     <App />
   </React.StrictMode>,
 );
+/*import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles.css";
+
+const skills = [
+  {
+    skill: "DSA (Java)",
+    level: "intermediate",
+    color: "#E76F51"
+  },
+  {
+    skill: "Core Java (OOP, Collections)",
+    level: "intermediate",
+    color: "#F4A261"
+  },
+  {
+    skill: "Multithreading",
+    level: "beginner",
+    color: "#2A9D8F"
+  },
+  {
+    skill: "Spring Boot",
+    level: "beginner",
+    color: "#6A994E"
+  },
+  {
+    skill: "SQL",
+    level: "intermediate",
+    color: "#3A86FF"
+  },
+  {
+    skill: "HTML + CSS",
+    level: "intermediate",
+    color: "#2662EA"
+  },
+  {
+    skill: "JavaScript",
+    level: "beginner",
+    color: "#EFD81D"
+  },
+  {
+    skill: "React",
+    level: "beginner",
+    color: "#61DBFB"
+  },
+  {
+    skill: "Git & GitHub",
+    level: "intermediate",
+    color: "#EB4A53"
+  },
+  {
+    skill: "Problem Solving",
+    level: "intermediate",
+    color: "#9D4EDD"
+  }
+];
+
+function App() {
+  return (
+    <div className="card">
+      <Avatar />
+      <div className="data">
+        <Intro />
+        {/* Should contain one Skill component
+        for each web dev skill that you have,
+        customized with props */}
+        <SkillList />
+      </div>
+    </div>
+  );
+}
+
+function Avatar() {
+  return <img className="avatar" src="Photo.jpeg" alt="image"></img>;
+}
+
+function Intro() {
+  return (
+    <div className="data">
+      <h1>SUJAY PAUL .P</h1>
+      <p>
+        I am an engineering student working towards becoming a Java Full Stack
+        Developer. I enjoy building projects and learning both frontend and
+        backend development. Currently, I am practicing React and improving my
+        problem-solving skills through DSA. My goal is to become a skilled and
+        industry-ready software developer.
+      </p>
+    </div>
+  );
+}
+/*
+function SkillList() {
+  return (
+    <div>
+      <Skill skill="Java " emoji="⭐⭐⭐" />
+      <Skill skill="Git " emoji="⭐⭐⭐" />
+      <Skill skill="React" emoji="⭐⭐" />
+      <Skill skill="HTML" emoji="⭐⭐" />
+      <Skill skill="CSS" emoji="⭐⭐" />
+      <Skill skill="Java Script" emoji="⭐⭐" />
+    </div>
+  );
+}
+function Skill(props) {
+  return (
+    <div className="skill">
+      <h3>
+        {props.skill}
+        {props.emoji}
+      </h3>
+    </div>
+  );
+}
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);*/
